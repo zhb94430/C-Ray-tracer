@@ -101,10 +101,6 @@ int main( int argc, char* argv[] ){
                             if (img != NULL)
                                 delete img;
                             img = new Image(width, height);
-                            
-//                            cout << "filmres" << '\n';
-//                            cout << filmData.width << '\n';
-//                            cout << filmData.height << '\n';
                         }
                         
                         if (line.find("output_image") == 0) {
@@ -166,17 +162,6 @@ int main( int argc, char* argv[] ){
 							camera cameraObject(px,py,pz,dx,dy,dz,ux,uy,uz,ha,ratio);
                             
                             img->addCamera(cameraObject);
-//                            cout << "camera" << '\n';
-//                            cout << cameraObject.px << '\n';
-//                            cout << cameraObject.py << '\n';
-//                            cout << cameraObject.pz << '\n';
-//                            cout << cameraObject.dx << '\n';
-//                            cout << cameraObject.dy << '\n';
-//                            cout << cameraObject.dz << '\n';
-//                            cout << cameraObject.ux << '\n';
-//                            cout << cameraObject.uy << '\n';
-//                            cout << cameraObject.uz << '\n';
-//                            cout << cameraObject.ha << '\n';
                         }
                         
                         if (line.find("sphere") == 0) {
@@ -191,11 +176,6 @@ int main( int argc, char* argv[] ){
 							sphere sphereData(x, y, z, r);
                             
                             img->addSphere(sphereData);
-//                            cout << "sphere" << '\n';
-//                            cout << sphereData.x << '\n';
-//                            cout << sphereData.y << '\n';
-//                            cout << sphereData.z << '\n';
-//                            cout << sphereData.r << '\n';
                         }
                         
                         if (line.find("background") == 0) {
@@ -209,10 +189,6 @@ int main( int argc, char* argv[] ){
                             
 							background bgData(r, g, b);
                             img->addBackground(bgData);
-//                            cout << "bg" << '\n';
-//                            cout << bgData.r << '\n';
-//                            cout << bgData.g << '\n';
-//                            cout << bgData.b << '\n';
                         }
                         
                         if (line.find("material") == 0) {
@@ -232,21 +208,6 @@ int main( int argc, char* argv[] ){
 							material materialData(ar, ag, ab, dr, dg, db, sr, sg, sb, ns, tr, tg, tb, ior);
                             
                             img->addMaterial(materialData);
-//                            cout << "material" << '\n';
-//                            cout << materialData.ar << '\n';
-//                            cout << materialData.ag << '\n';
-//                            cout << materialData.ab << '\n';
-//                            cout << materialData.dr << '\n';
-//                            cout << materialData.dg << '\n';
-//                            cout << materialData.db << '\n';
-//                            cout << materialData.sr << '\n';
-//                            cout << materialData.sg << '\n';
-//                            cout << materialData.sb << '\n';
-//                            cout << materialData.ns << '\n';
-//                            cout << materialData.tr << '\n';
-//                            cout << materialData.tg << '\n';
-//                            cout << materialData.tb << '\n';
-//                            cout << materialData.ior << '\n';
                         }
                         
                         if (line.find("directional_light") == 0) {
@@ -262,13 +223,6 @@ int main( int argc, char* argv[] ){
 							directional_light dirLightData(r, g, b, x, y, z);
                             
                             img->addDirLight(dirLightData);
-//                            cout << "dir_light" << '\n';
-//                            cout << dirLightData.r << '\n';
-//                            cout << dirLightData.g << '\n';
-//                            cout << dirLightData.b << '\n';
-//                            cout << dirLightData.x << '\n';
-//                            cout << dirLightData.y << '\n';
-//                            cout << dirLightData.z << '\n';
                         }
                         
                         if (line.find("point_light") == 0) {
@@ -284,13 +238,6 @@ int main( int argc, char* argv[] ){
 							point_light pntLightData(r, g, b, x, y, z);
                             
                             img->addPntLight(pntLightData);
-//                            cout << "pnt_light" << '\n';
-//                            cout << pntLightData.r << '\n';
-//                            cout << pntLightData.g << '\n';
-//                            cout << pntLightData.b << '\n';
-//                            cout << pntLightData.x << '\n';
-//                            cout << pntLightData.y << '\n';
-//                            cout << pntLightData.z << '\n';
                         }
                         
                         if (line.find("spot_light") == 0) {
@@ -308,18 +255,6 @@ int main( int argc, char* argv[] ){
 							spot_light spotLightData(r, g, b, px, py, pz, dx, dy, dz, angle1, angle2);
                             
                             img->addSpotLight(spotLightData);
-//                            cout << "spot_light" << '\n';
-//                            cout << spotLightData.r << '\n';
-//                            cout << spotLightData.g << '\n';
-//                            cout << spotLightData.b << '\n';
-//                            cout << spotLightData.px << '\n';
-//                            cout << spotLightData.py << '\n';
-//                            cout << spotLightData.pz << '\n';
-//                            cout << spotLightData.dx << '\n';
-//                            cout << spotLightData.dy << '\n';
-//                            cout << spotLightData.dz << '\n';
-//                            cout << spotLightData.angle1 << '\n';
-//                            cout << spotLightData.angle2 << '\n';
                         }
                         
                         if (line.find("ambient_light") == 0) {
@@ -334,10 +269,6 @@ int main( int argc, char* argv[] ){
 							ambient_light ambientLightData(r, g, b);
                             
                             img->addAmbientLight(ambientLightData);
-//                            cout << "am_light" << '\n';
-//                            cout << ambientLightData.r << '\n';
-//                            cout << ambientLightData.g << '\n';
-//                            cout << ambientLightData.b << '\n';
                         }
                         
                         if (line.find("max_depth") == 0) {
@@ -348,8 +279,6 @@ int main( int argc, char* argv[] ){
                             ss >> max_depth;
                             
                             img->addMaxDepth(max_depth);
-//                            cout << "mdepth" << '\n';
-//                            cout << max_depth << '\n';
                         }
                         
                         if (line.find("jitter") == 0) {
@@ -362,8 +291,6 @@ int main( int argc, char* argv[] ){
                             cout << "jitter" << jitter << endl;
                             
                             img->addJitter(jitter);
-                            //                            cout << "mdepth" << '\n';
-                            //                            cout << max_depth << '\n';
                         }
                         
                         if (line.find("adaptive") == 0) {
@@ -374,8 +301,6 @@ int main( int argc, char* argv[] ){
                             ss >> adaptive;
                             
                             img->addAdaptive(adaptive);
-                            //                            cout << "mdepth" << '\n';
-                            //                            cout << max_depth << '\n';
                         }
                         
                         //Assignment 3⬇️
@@ -391,10 +316,6 @@ int main( int argc, char* argv[] ){
                             vertex vertexData(x, y, z);
                             
                             img->addVertex(vertexData);
-//                            cout << "vertex" << endl;
-//                            cout << vertexData.x << endl;
-//                            cout << vertexData.y << endl;
-//                            cout << vertexData.z << endl;
                         }
                         
                         if (line.find("normal") == 0) {
@@ -409,10 +330,6 @@ int main( int argc, char* argv[] ){
                             normal normalData(x, y, z);
                             
                             img->addNormal(normalData);
-//                            cout << "normal" << endl;
-//                            cout << normalData.x << endl;
-//                            cout << normalData.y << endl;
-//                            cout << normalData.z << endl;
                         }
                         
                         if (line.find("triangle") == 0) {
@@ -429,16 +346,6 @@ int main( int argc, char* argv[] ){
                                                   img->vertexList[index3]);
                             
                             img->addTriangle(triangleData);
-//                            cout << "triangle" << endl;
-//                            cout << triangleData.v1.x << endl;
-//                            cout << triangleData.v1.y << endl;
-//                            cout << triangleData.v1.z << endl;
-//                            cout << triangleData.v2.x << endl;
-//                            cout << triangleData.v2.y << endl;
-//                            cout << triangleData.v2.z << endl;
-//                            cout << triangleData.v3.x << endl;
-//                            cout << triangleData.v3.y << endl;
-//                            cout << triangleData.v3.z << endl;
                         }
                         
                         if (line.find("normalTriangle") == 0) {
@@ -458,68 +365,11 @@ int main( int argc, char* argv[] ){
                                                   img->normalList[index6]);
                             
                             img->addNormalTriangle(normalTriangleData);
-//                            cout << "normal triangle" << endl;
-//                            cout << normalTriangleData.v1.x << endl;
-//                            cout << normalTriangleData.v1.y << endl;
-//                            cout << normalTriangleData.v1.z << endl;
-//                            cout << normalTriangleData.n1.x << endl;
-//                            cout << normalTriangleData.n1.y << endl;
-//                            cout << normalTriangleData.n1.z << endl;
-//                            cout << normalTriangleData.v2.x << endl;
-//                            cout << normalTriangleData.v2.y << endl;
-//                            cout << normalTriangleData.v2.z << endl;
-//                            cout << normalTriangleData.n2.x << endl;
-//                            cout << normalTriangleData.n2.y << endl;
-//                            cout << normalTriangleData.n2.z << endl;
-//                            cout << normalTriangleData.v3.x << endl;
-//                            cout << normalTriangleData.v3.y << endl;
-//                            cout << normalTriangleData.v3.z << endl;
-//                            cout << normalTriangleData.n3.x << endl;
-//                            cout << normalTriangleData.n3.y << endl;
-//                            cout << normalTriangleData.n3.z << endl;
                         }
                         //Assignment 3⬆️
                     }
                     readIn.close();
                 }
-				
-                //Debug code to verify the scene has been established
-//                int i;
-//                
-//                for (i = 0; i < img->sphereList.size(); i++) {
-//                    cout << "in sphere" << '\n';
-//                    cout << img->sphereList[i].x << '\n';
-//                }
-//                
-//                for (i = 0; i < img->cameraList.size(); i++) {
-//                    cout << "in camera" << '\n';
-//                    cout << img->cameraList[i].px << '\n';
-//                }
-//                
-//                for (i = 0; i < img->materialList.size(); i++) {
-//                    cout << "in material" << '\n';
-//                    cout << img->materialList[i].ar << '\n';
-//                }
-//                
-//                for (i = 0; i < img->dirLightList.size(); i++) {
-//                    cout << "in dirLight" << '\n';
-//                    cout << img->dirLightList[i].r << '\n';
-//                }
-//                
-//                for (i = 0; i < img->pntLightList.size(); i++) {
-//                    cout << "in pntLight" << '\n';
-//                    cout << img->pntLightList[i].r << '\n';
-//                }
-//                
-//                for (i = 0; i < img->spotLightList.size(); i++) {
-//                    cout << "in spotLight" << '\n';
-//                    cout << img->spotLightList[i].r << '\n';
-//                }
-//                
-//                for (i = 0; i < img->ambientLightList.size(); i++) {
-//                    cout << "in ambientLight" << '\n';
-//                    cout << img->ambientLightList[i].r << '\n';
-//                }
                 
                 //Default check
                 if (img->cameraList.size() == 0) {
@@ -544,26 +394,18 @@ int main( int argc, char* argv[] ){
                 fprintf(stderr, "image: invalid option: %s\n", *argv);
                 ShowUsage();
             }
-
-//			else if (!strcmp(*argv, "-output"))
-//			{
-//				CheckOption(*argv, argc, 2);
-//				if (img == NULL) ShowUsage();
-//                
-                if (output_image.length() != 0) {
-                    char output_image_char_array[output_image.length()];
-                    strcpy(output_image_char_array, output_image.c_str());
-                    img->Write(output_image_char_array);
-                    did_output = true;
-                }
-                else {
-                    img->Write(argv[1]);
-                    did_output = true;
-                }
-				argv += 2, argc -= 2;
-//			}
-
-			
+              
+            if (output_image.length() != 0) {
+                char output_image_char_array[output_image.length()];
+                strcpy(output_image_char_array, output_image.c_str());
+                img->Write(output_image_char_array);
+                did_output = true;
+            }
+            else {
+                img->Write(argv[1]);
+                did_output = true;
+            }
+			argv += 2, argc -= 2;		
 		}
 	}
 
