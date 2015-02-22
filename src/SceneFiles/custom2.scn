@@ -1,0 +1,25 @@
+#Simple Sphere Sceen
+camera 0 2 -10 0 -.1 .9 0 1 0 26
+output_image custom2.bmp
+
+#"ground" sphere
+material .75 .75 .75 .75 .75 .75 .3 .3 .3 32 .2 .2 .2 1.5
+sphere 0 -50 0 50
+
+#blue sphere
+material 0 0 1 0 0 1 1 1 1 16 0 0 0 1.0
+sphere -4 2 0 1
+
+#another blue sphere
+material 0 0 1 0 0 1 1 1 1 16 0 0 0 1.0
+sphere 4 2 0 1
+
+#white overhead light
+point_light 10 10 10 -6 5 2
+point_light 50 50 50 6 5 -2
+ambient_light .35 .35 .35
+background .05 .05 .05
+
+film_resolution 1920 1080
+
+max_depth 2

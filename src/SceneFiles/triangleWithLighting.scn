@@ -1,0 +1,12 @@
+
+background 0 1 1
+max_vertices 3
+vertex 0 0 2
+vertex 0 1 2
+vertex 1 0 2
+
+triangle 0 1 2
+material 1 0 0 1 0 0 .3 .3 .3 32 .2 .2 .2 1.5
+
+ambient_light .35 .35 .35
+point_light 10 10 10 0.5 0.5 0

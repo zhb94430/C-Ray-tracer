@@ -1,0 +1,23 @@
+#Simple Sphere Sceen
+camera 0 2 -10 0 -.1 .9 0 1 0 26
+output_image custom1.bmp
+
+#"ground" sphere
+material .75 .75 .75 .75 .75 .75 .3 .3 .3 32 .2 .2 .2 1.5
+sphere 0 -50 0 50
+
+#red sphere
+material 1 0 0 1 0 0 .3 .3 .3 32 .2 .2 .2 1.5
+sphere 0 1 5 .75
+
+#green sphere
+material 0 .2 0 0 .2 0 .06 .06 .06 16 .8 .8 .8  1.1
+sphere 2 1 5 1
+
+#white overhead light
+point_light 10 10 10 0 5 0
+point_light 50 50 50 10 5 -5
+ambient_light .35 .35 .35
+background .3 .5 .7
+
+max_depth 2
